@@ -1,0 +1,19 @@
+{
+  "name": "p3_lesaux_steven",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenlsx/LeSauxSteven_3_20102021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenlsx/LeSauxSteven_3_20102021/issues"
+  },
+  "homepage": "https://github.com/stevenlsx/LeSauxSteven_3_20102021#readme"
+}

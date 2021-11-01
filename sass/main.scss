@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'robotomedium';
+    src: url('Roboto-Medium-webfont.eot');
+    src: url('Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Medium-webfont.woff2') format('woff2'),
+        url('Roboto-Medium-webfont.woff') format('woff'),
+        url('Roboto-Medium-webfont.ttf') format('truetype'),
+        url('Roboto-Medium-webfont.svg#robotomedium') format('svg');
+    }
+    
+    @font-face {
+        font-family: 'robotoregular';
+        src: url('Roboto-Regular-webfont.eot');
+        src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+                url('Roboto-Regular-webfont.woff2') format('woff2'),
+                url('Roboto-Regular-webfont.woff') format('woff'),
+                url('Roboto-Regular-webfont.ttf') format('truetype'),
+                url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+        
+    }
+    h1, h2, h3, ul{
+        font-family:"robotomedium";
+    }
+    body{
+        font-family: 'robotoregular';
+        text-align: center;
+        margin: auto;
+        background-color: #F6F6F6;
+        font-size: 1em;
+    }
+    
+    header > img{
+        margin-top: 37px;
+        margin-bottom: -4px;
+        height: 49px;
+    }
+    .header__p{
+        background-color: #EAEAEA;
+        padding: 18px 0px;
+        box-shadow: 0px 3px 5px #c6c6c6 inset;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #3d3d3d;
+    }
+    .fa-map-marker-alt{
+        padding-right: 20px;
+        font-size: 1.1em;
+    }
+    .header__present{
+        margin: 0px 66px;
+        font-size: 1.4em;
+    
+        & p{
+            font-size: 1.2em;
+        }
+    }
+    .header__btn{
+    font-size: 1.1em;
+    padding: 20px 32px 20px 32px;
+    border-radius: 65px 65px 65px 64px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    border-style: none;
+    box-shadow: 0px 7px 9px #c6c6c6;
+    }
+
+
+    .restaurant__card > img{
+        width: 160px;
+        height: 70px;
+    }
+    
+
+    
+
+
+    /**************************TABLETTE**************************/
+    @media screen and (min-width:601px) and (max-width:990px){
+    
+    }
+    
+    
+    /**************************DESKTOP/LAPTOP**************************/
+    @media screen and (min-width:991px){
+    }
