@@ -69,16 +69,28 @@ h2 {
 article {
   background-color: white;
   font-size: 1.4em;
+  list-style: none;
 }
-article ol {
+article ul {
   padding-bottom: 20px;
 }
+article p {
+  position: absolute;
+  top: 18px;
+  left: -15px;
+  color: white;
+  background-color: #9356DC;
+  font-size: 0.9em;
+  border-radius: 20px;
+  padding: 7px 15px;
+}
 article .article__list {
+  position: relative;
   background-color: #F6F6F6;
   margin-bottom: 41px;
   margin-right: 50px;
   padding: 40px 122px 40px 0px;
-  list-style-position: inside;
+  list-style: none;
   border-radius: 33px;
   font-weight: bold;
   box-shadow: 0px 7px 9px #c6c6c6;
@@ -95,14 +107,19 @@ section {
   font-size: 1.4em;
   text-align: left;
 }
+section .section__h2 {
+  font-size: 1.9em;
+  margin-top: -16px;
+}
 
 .restaurant__card {
   background-color: white;
-  margin: 1px 15px 10px 20px;
+  margin: 1px 15px 34px 20px;
   width: 93%;
   height: 16.9em;
   border-radius: 25px;
   box-shadow: 0px 7px 9px #c6c6c6;
+  position: relative;
 }
 .restaurant__card > img {
   width: 100%;
@@ -115,9 +132,20 @@ section {
   margin-top: 8px;
   margin-left: 20px;
 }
-.restaurant__card p {
+.restaurant__card .localisation {
   margin-top: -21px;
   margin-left: 20px;
+}
+.restaurant__card .nouveaute {
+  background-color: #99E2D0;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 6px 18px;
+  border-radius: 4px;
+  color: #008261;
+  position: absolute;
+  top: 1px;
+  right: 18px;
 }
 
 /*******Footer*******/
@@ -149,5 +177,164 @@ footer .fa-hands-helping {
 
 /**************************TABLETTE**************************/
 /**************************DESKTOP/LAPTOP**************************/
+/****************HEADER****************/
+.menu__header {
+  font-size: 1em;
+  background-color: white;
+}
+.menu__header > .fa-arrow-left {
+  font-size: 1.6em;
+  color: #383838;
+  font-weight: bolder;
+  position: absolute;
+  top: 36px;
+  left: 40px;
+}
+.menu__header .header__logo {
+  height: 43px;
+  margin-bottom: -23px;
+  margin-top: 31px;
+}
+.menu__header .header__img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/****************SECTION****************/
+.menu__section {
+  position: relative;
+  margin-top: 20px;
+  border-radius: 5px 5px 0px 0px;
+}
+.menu__section > article {
+  background-color: #F6F6F6;
+}
+.menu__section .fa-heart {
+  font-size: 1.5em;
+  position: absolute;
+  right: 50px;
+  top: 15px;
+}
+.menu__section .article__titre {
+  position: relative;
+  margin-left: 27px;
+}
+.menu__section .article__titre:before {
+  /*<-------------Souligne ENTREES, PLAT, DESSERTS*/
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 2px;
+  border-bottom: 5px solid #99E2D0;
+  width: 81px;
+}
+
+.entree__carte {
+  background-color: white;
+  margin: 15px;
+  position: relative;
+  font-size: 0.8em;
+  padding-left: 17px;
+  border-radius: 30px;
+  box-shadow: 0px 6px 10px #D8D8D8;
+}
+.entree__carte h3 {
+  padding-top: 23px;
+}
+.entree__carte .price {
+  position: absolute;
+  right: 46px;
+  bottom: -25px;
+  font-weight: bold;
+}
+.entree__carte p {
+  padding-bottom: 20px;
+  margin-top: -20px;
+}
+
+.plat__carte {
+  background-color: white;
+  margin: 15px;
+  position: relative;
+  font-size: 0.8em;
+  padding-left: 17px;
+  border-radius: 30px;
+  box-shadow: 0px 6px 10px #D8D8D8;
+}
+.plat__carte h3 {
+  padding-top: 23px;
+}
+.plat__carte .price {
+  position: absolute;
+  right: 46px;
+  bottom: -25px;
+  font-weight: bold;
+}
+.plat__carte p {
+  padding-bottom: 20px;
+  margin-top: -20px;
+}
+
+.dessert__carte {
+  background-color: white;
+  margin: 15px;
+  position: relative;
+  font-size: 0.8em;
+  padding-left: 17px;
+  border-radius: 30px;
+  box-shadow: 0px 6px 10px #D8D8D8;
+}
+.dessert__carte h3 {
+  padding-top: 23px;
+}
+.dessert__carte .price {
+  position: absolute;
+  right: 46px;
+  bottom: -25px;
+  font-weight: bold;
+}
+.dessert__carte p {
+  padding-bottom: 20px;
+  margin-top: -20px;
+}
+
+.commande__btn {
+  font-size: 0.9em;
+  padding: 20px 62px;
+  border-radius: 65px 65px 65px 64px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border-style: none;
+  box-shadow: 0px 7px 9px #c6c6c6;
+  margin: 50px 0px 50px 153px;
+}
+
+/****************FOOTER****************/
+footer {
+  background-color: #383838;
+  color: white;
+  text-align: left;
+  list-style: none;
+  padding: 20px;
+  margin-top: 80px;
+}
+footer > img {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(212deg) brightness(106%) contrast(101%);
+  width: 160px;
+  padding: 12px 0px;
+  margin-bottom: 8px;
+}
+footer li {
+  padding-bottom: 8px;
+  font-size: 1.3em;
+}
+footer .fa-utensils {
+  padding-right: 15px;
+}
+footer .fa-hands-helping {
+  padding-right: 13px;
+  font-size: 0.8em;
+}
 
 /*# sourceMappingURL=style.css.map */
