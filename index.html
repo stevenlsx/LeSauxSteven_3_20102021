@@ -8,7 +8,7 @@
         <title>Ohmyfood</title>
     </head>
     
-    <body>
+    <body class="body_index">
         <header>
             <img src="img/ohmyfood.png" alt="Logo Ohmyfood"/>
             <p class="header__p"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
@@ -23,35 +23,67 @@
         <article>
             <h2>Fonctionnement</h2>
             <ul>
-                <li class="article__list"><p>1</p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-                <li class="article__list"><P>2</P><i class="fas fa-list-ul"></i>Composez votre menu</li>
-                <li class="article__list"><p>3</p><i class="fas fa-store"></i>Dégustez au restaurant</li>
+                <li class="article__list"><p class="li_number">1</p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                <li class="article__list"><P class="li_number">2</P><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                <li class="article__list"><p class="li_number">3</p><i class="fas fa-store"></i>Dégustez au restaurant</li>
             </ul>
         </article>
 
         <section>
             <h2 class="section__h2">Restaurants</h2>
-            <div class="restaurant__card">
-                <img src="img/lapalette.jpg" alt="Illustration du restaurant La palette du goût"/>
-                <h3>La palette du goût</h3>
+            <div class="restaurant_card">
+                <img src="img/lapalette.jpg" alt="Illustration du restaurant La palette du goût" height="100px"/>
+                <div class="restaurant_card_flex">
+                    <div class="restaurant_card_legend">
+                        <h3>La palette du goût</h3>
+                        <p class="localisation">Ménilmontant</p>
+                    </div>
+                    <a href="pages/menu_la_palette_du_gout.html"></a>
+                    <div class="restaurant_card_heart">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
                 <p class="nouveaute">Nouveau</p>
-                <p class="localisation">Ménilmontant</p>
             </div>
-            <div class="restaurant__card">
-                <img src="img/lanote.jpg" alt="Illustration du restaurant La note enchantée"/>
-                <h3>La note enchantée</h3>
+            <div class="restaurant_card">
+                <img src="img/lanote.jpg" alt="Illustration du restaurant La note enchantée" height="60px"/>
+                <div class="restaurant_card_flex">
+                    <div class="restaurant_card_legend">
+                        <h3>La note enchantée</h3>
+                        <p class="localisation">Charonne</p>
+                    </div>
+                    <a href="pages/menu_la_note_enchantee.html"></a>
+                    <div class="restaurant_card_heart">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
                 <p class="nouveaute">Nouveau</p>
-                <p class="localisation">Charonne</p>
             </div>
-            <div class="restaurant__card">
-                <img src="img/lafrancaise.jpg" alt="Illustration du restaurant À la française"/>
-                <h3>À la française</h3>
-                <p class="localisation">Cité Rouge</p>
+            <div class="restaurant_card">
+                <img src="img/lafrancaise.jpg" alt="Illustration du restaurant À la française" height="100px"/>
+                <div class="restaurant_card_flex">
+                    <div class="restaurant_card_legend">
+                        <h3>À la française</h3>
+                        <p class="localisation">Cité Rouge</p>
+                    </div>
+                    <a href="pages/menu_a_la_francaise.html" ></a>
+                    <div class="restaurant_card_heart">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
             </div>
-            <div class="restaurant__card">
-                <img src="img/ledelice.jpg" alt="Illustration du restaurant Le délice des sens"/>
-                <h3>Le délice des sens</h3>
-                <p class="localisation">Folie-Méricourt</p>
+            <div class="restaurant_card">
+                <img src="img/ledelice.jpg" alt="Illustration du restaurant Le délice des sens" height="100px"/>
+                <div class="restaurant_card_flex">
+                    <div class="restaurant_card_legend">
+                        <h3>Le délice des sens</h3>
+                        <p class="localisation">Folie-Méricourt</p>
+                    </div>
+                    <a href="pages/menu_le_delice_des_sens.html"></a>
+                    <div class="restaurant_card_heart">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -62,7 +94,7 @@
                 <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
                 <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
                 <li>Mentions légales</li>
-                <li>Contact</li>
+                <li><a href="mailto:ohmyfood@mail.com">Contact</a></li>
             </ul>
         </footer>
 
