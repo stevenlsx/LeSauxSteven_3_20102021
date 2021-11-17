@@ -84,6 +84,12 @@ h2 {
 article {
   background-color: white;
   list-style: none;
+  /*.fas{
+      padding-left: 13px;
+      padding-right: 23px;
+      font-size: 1.1em;
+      color: #6b6b6b;
+  }*/
 }
 article ul {
   padding-bottom: 20px;
@@ -111,12 +117,6 @@ article .article__list {
   font-weight: bold;
   box-shadow: 0px 7px 9px #c6c6c6;
 }
-article .fas {
-  padding-left: 13px;
-  padding-right: 23px;
-  font-size: 1.1em;
-  color: #6b6b6b;
-}
 
 /************SECTION*********/
 section {
@@ -135,19 +135,14 @@ section .section__h2 {
   box-shadow: 0px 7px 9px #c6c6c6;
   position: relative;
 }
-.restaurant_card > img {
+.restaurant_card img {
   width: 100%;
   height: 260px;
   object-fit: cover;
   border-radius: 22px 22px 0px 0px;
 }
-.restaurant_card a::before {
-  position: absolute;
-  content: " ";
-  top: 0px;
-  left: 0px;
-  width: 95%;
-  height: 100%;
+.restaurant_card a {
+  color: black;
 }
 .restaurant_card h3 {
   font-size: 18px;
@@ -201,9 +196,13 @@ footer > img {
   padding: 12px 0px;
   margin-bottom: 8px;
 }
+footer ul {
+  margin-left: -37px;
+}
 footer li {
   padding-bottom: 8px;
   font-size: 16px;
+  list-style: none;
 }
 footer .fa-utensils {
   padding-right: 15px;
@@ -211,6 +210,66 @@ footer .fa-utensils {
 footer .fa-hands-helping {
   padding-right: 13px;
   font-size: 0.8em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.85);
+  z-index: 100;
+}
+.overlay .on-load {
+  opacity: 0;
+  animation: fade-in-up 1s forwards;
+}
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.overlay .spinner {
+  pointer-events: none;
+  display: inline-block;
+  margin-top: 15%;
+  width: 270px;
+  height: 270px;
+  border: 6px solid transparent;
+  border-color: #cccccc;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spin 1s, colour-wheel 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes colour-wheel {
+  0% {
+    border-top-color: #9356DC;
+  }
+  33% {
+    border-top-color: #FF79DA;
+  }
+  66% {
+    border-top-color: #99E2D0;
+  }
+  100% {
+    border-top-color: #9356DC;
+  }
 }
 
 /**************************TABLETTE**************************/
@@ -310,32 +369,19 @@ footer .fa-hands-helping {
   box-shadow: 0px 6px 10px #D8D8D8;
 }
 .entree__carte .price {
-  padding-right: 13px;
   font-weight: bold;
 }
 .entree__carte p {
   padding-bottom: 2px;
-  margin-top: -13px;
 }
 .entree__carte .check {
-  display: flex;
-  border: 2px solid #99E2D0;
-  background-color: #99E2D0;
-  height: 91px;
-  width: 10%;
-  border-radius: 17px;
-}
-.entree__carte .check__box {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: inline;
 }
 .entree__carte .fa-check-circle {
+  border: 2px solid #99E2D0;
+  font-size: 23px;
+  height: 107.58px;
   color: #99E2D0;
-  text-align: center;
-  background-color: white;
 }
 
 .plat__carte {
@@ -350,32 +396,19 @@ footer .fa-hands-helping {
   box-shadow: 0px 6px 10px #D8D8D8;
 }
 .plat__carte .price {
-  padding-right: 13px;
   font-weight: bold;
 }
 .plat__carte p {
   padding-bottom: 2px;
-  margin-top: -13px;
 }
 .plat__carte .check {
-  display: flex;
-  border: 2px solid #99E2D0;
-  background-color: #99E2D0;
-  height: 91px;
-  width: 10%;
-  border-radius: 17px;
-}
-.plat__carte .check__box {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: inline;
 }
 .plat__carte .fa-check-circle {
+  border: 2px solid #99E2D0;
+  font-size: 23px;
+  height: 107.58px;
   color: #99E2D0;
-  text-align: center;
-  background-color: white;
 }
 
 .dessert__carte {
@@ -390,32 +423,19 @@ footer .fa-hands-helping {
   box-shadow: 0px 6px 10px #D8D8D8;
 }
 .dessert__carte .price {
-  padding-right: 13px;
   font-weight: bold;
 }
 .dessert__carte p {
   padding-bottom: 2px;
-  margin-top: -13px;
 }
 .dessert__carte .check {
-  display: flex;
-  border: 2px solid #99E2D0;
-  background-color: #99E2D0;
-  height: 91px;
-  width: 10%;
-  border-radius: 17px;
-}
-.dessert__carte .check__box {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: inline;
 }
 .dessert__carte .fa-check-circle {
+  border: 2px solid #99E2D0;
+  font-size: 23px;
+  height: 107.58px;
   color: #99E2D0;
-  text-align: center;
-  background-color: white;
 }
 
 .commande__btn {
@@ -450,9 +470,13 @@ footer > img {
   padding: 12px 0px;
   margin-bottom: 8px;
 }
+footer ul {
+  margin-left: -37px;
+}
 footer li {
   padding-bottom: 8px;
   font-size: 16px;
+  list-style: none;
 }
 footer .fa-utensils {
   padding-right: 15px;
