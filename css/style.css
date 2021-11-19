@@ -212,6 +212,24 @@ footer .fa-hands-helping {
   font-size: 0.8em;
 }
 
+@keyframes overlay_motion {
+  0% {
+    transform: scaleY(1);
+    opacity: 0.85;
+  }
+  33% {
+    opacity: 0.4;
+  }
+  66% {
+    opacity: 0.2;
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -220,10 +238,14 @@ footer .fa-hands-helping {
   width: 100%;
   background-color: rgba(128, 128, 128, 0.85);
   z-index: 100;
+  transform-origin: 50% 0%;
+  animation: overlay_motion 600ms 2s forwards;
+  /********SPINER********/
 }
 .overlay .on-load {
   opacity: 0;
   animation: fade-in-up 1s forwards;
+  z-index: 1;
 }
 @keyframes fade-in-up {
   from {
@@ -245,7 +267,7 @@ footer .fa-hands-helping {
   border-color: #cccccc;
   border-top-color: #9356DC;
   border-radius: 50%;
-  animation: spin 1s, colour-wheel 3s;
+  animation: spin 700ms, colour-wheel 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -357,85 +379,156 @@ footer .fa-hands-helping {
   width: 45px;
 }
 
+@keyframes menu_motion {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  20% {
+    opacity: 0.2;
+    transform: translateY(5px);
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .entree__carte {
   display: flex;
   justify-content: space-between;
-  align-items: end;
   background-color: white;
   margin: 24px 10px -5px 10px;
   font-size: 17px;
   padding-left: 12px;
   border-radius: 17px;
   box-shadow: 0px 6px 10px #D8D8D8;
+  overflow: hidden;
+  animation: menu_motion 1.5s 100ms linear forwards;
+}
+.entree__carte:hover .check {
+  margin-right: 90px;
+}
+.entree__carte:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.entree__carte .check {
+  display: flex;
+  transition: margin-right 300ms linear;
+}
+.entree__carte .fa-check-circle {
+  font-size: 34px;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 350ms linear;
+}
+.entree__carte .content {
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  padding: 0px 28px;
+  margin-right: -90px;
 }
 .entree__carte .price {
   font-weight: bold;
+  display: flex;
+  align-items: end;
+  padding-right: 10px;
 }
 .entree__carte p {
-  padding-bottom: 2px;
-}
-.entree__carte .check {
-  display: inline;
-}
-.entree__carte .fa-check-circle {
-  border: 2px solid #99E2D0;
-  font-size: 23px;
-  height: 107.58px;
-  color: #99E2D0;
+  margin-top: -7px;
 }
 
 .plat__carte {
   display: flex;
   justify-content: space-between;
-  align-items: end;
   background-color: white;
   margin: 24px 10px -5px 10px;
   font-size: 17px;
   padding-left: 12px;
   border-radius: 17px;
   box-shadow: 0px 6px 10px #D8D8D8;
+  overflow: hidden;
+  animation: menu_motion 1.5s 100ms linear forwards;
+}
+.plat__carte:hover .check {
+  margin-right: 90px;
+}
+.plat__carte:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.plat__carte .check {
+  display: flex;
+  transition: margin-right 300ms linear;
+}
+.plat__carte .fa-check-circle {
+  font-size: 34px;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 350ms linear;
+}
+.plat__carte .content {
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  padding: 0px 28px;
+  margin-right: -90px;
 }
 .plat__carte .price {
   font-weight: bold;
+  display: flex;
+  align-items: end;
+  padding-right: 10px;
 }
 .plat__carte p {
-  padding-bottom: 2px;
-}
-.plat__carte .check {
-  display: inline;
-}
-.plat__carte .fa-check-circle {
-  border: 2px solid #99E2D0;
-  font-size: 23px;
-  height: 107.58px;
-  color: #99E2D0;
+  margin-top: -7px;
 }
 
 .dessert__carte {
   display: flex;
   justify-content: space-between;
-  align-items: end;
   background-color: white;
   margin: 24px 10px -5px 10px;
   font-size: 17px;
   padding-left: 12px;
   border-radius: 17px;
   box-shadow: 0px 6px 10px #D8D8D8;
+  overflow: hidden;
+  animation: menu_motion 1.5s 100ms linear forwards;
+}
+.dessert__carte:hover .check {
+  margin-right: 90px;
+}
+.dessert__carte:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.dessert__carte .check {
+  display: flex;
+  transition: margin-right 300ms linear;
+}
+.dessert__carte .fa-check-circle {
+  font-size: 34px;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 350ms linear;
+}
+.dessert__carte .content {
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  padding: 0px 28px;
+  margin-right: -90px;
 }
 .dessert__carte .price {
   font-weight: bold;
+  display: flex;
+  align-items: end;
+  padding-right: 10px;
 }
 .dessert__carte p {
-  padding-bottom: 2px;
-}
-.dessert__carte .check {
-  display: inline;
-}
-.dessert__carte .fa-check-circle {
-  border: 2px solid #99E2D0;
-  font-size: 23px;
-  height: 107.58px;
-  color: #99E2D0;
+  margin-top: -7px;
 }
 
 .commande__btn {
