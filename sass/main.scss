@@ -114,27 +114,34 @@ article{
         background-color: #F6F6F6;
         margin-bottom: 41px;
         margin-right: 50px;
-        padding: 28px 0px;
+        padding-top: 25px;
+        padding-bottom: 25px;
         list-style: none;
         border-radius: 21px;
         font-weight: bold;
         box-shadow: 0px 7px 9px #c6c6c6;
+        &:hover{
+            background-color: #f5edff;
+            .fa-mobile-alt,.fa-list-ul,.fa-store{
+                color: #9356DC
+            }
+        }
     }
-    /*.fas{
+    .article__li__fa{
         padding-left: 13px;
         padding-right: 23px;
         font-size: 1.1em;
         color: #6b6b6b;
-    }*/
+    }
 }
 
 /************SECTION*********/
+.section__h2{
+    margin-top: -16px;
+}
 section{
     font-size: 16px;
     text-align: left;
-    .section__h2{
-        margin-top: -16px;
-    }
 }
 .restaurant_card{
     background-color: white;
@@ -305,19 +312,65 @@ footer{
 
 /**************************TABLETTE**************************/
 @media screen and (min-width:601px) and (max-width:990px){
-
-    section{
-        display: grid;
-        grid-template-columns: 1fr; 
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    
+    /**********HEADER + ARTICLE FONCTIONNEMENT***********/
+    .article__h2{
+        text-align: center;
+        margin-bottom: 37px;
     }
-
+    article ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .article__list{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 1em;
+    }
+    .li_number{
+        margin-top: -19px;
+        margin-left: 3px;
+    }
+   /*****************SECTION****************/
+   .section__flex{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+   }
+    
 }
 
     
     /**************************DESKTOP/LAPTOP**************************/
     @media screen and (min-width:991px){
-
-    }
+        .article__h2{
+            text-align: center;
+            margin-bottom: 37px;
+            font-size: 34px;
+        }
+        article ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .article__list{
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .li_number{
+            margin-top: -19px;
+            margin-left: 3px;
+        }
+        /*****************SECTION****************/
+        .section__flex{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+}
     @import 'menu.scss';

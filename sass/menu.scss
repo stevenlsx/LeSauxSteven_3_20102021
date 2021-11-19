@@ -33,7 +33,7 @@
     margin-top: -71px;
     border-radius: 45px 45px 0px 0px;
     background-color: #F6F6F6;
-    >article{
+    article{
         background-color: #F6F6F6;
         margin-bottom: 28px;
         padding-top: 10px;
@@ -163,3 +163,54 @@
 footer{
     @include omf__footer;
 }
+@media screen and (min-width:601px) and (max-width:990px){
+    /*
+    .menu__responsive{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }*/
+    .menu__responsive{
+        display: grid;
+        grid-template-areas: 
+        ".menu__section__header"
+        "#entree #plat"
+         "#dessert";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .menu__section__header{
+        justify-content: center;
+        
+    }
+    .menu__section_h1{
+        margin-right: 10px;
+    }
+}
+    
+    /**************************DESKTOP/LAPTOP**************************/
+    @media screen and (min-width:991px){
+        .menu__responsive{
+            display: grid;
+            grid-template-areas: 
+            ".menu__section__header"
+            "#entree #plat #dessert";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+        .entree__carte{
+            height: 121px;
+        }
+        .plat__carte{
+            height: 121px;
+        }
+        .dessert__carte{
+            height: 121px;
+        }
+        .menu__section__header{
+            justify-content: center;
+        }
+        .menu__section_h1{
+            margin-right: 10px;
+        }
+    }
