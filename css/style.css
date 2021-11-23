@@ -119,8 +119,8 @@ article .article__list:hover .fa-mobile-alt, article .article__list:hover .fa-li
   color: #9356DC;
 }
 article .article__li__fa {
-  padding-left: 13px;
-  padding-right: 23px;
+  margin-left: 11px;
+  padding-right: 9px;
   font-size: 1.1em;
   color: #6b6b6b;
 }
@@ -449,12 +449,8 @@ footer .fa-hands-helping {
     opacity: 0;
     transform: translateY(15px);
   }
-  20% {
-    opacity: 0.2;
-    transform: translateY(5px);
-  }
-  70% {
-    opacity: 0.4;
+  33% {
+    opacity: 0.1;
   }
   100% {
     opacity: 1;
@@ -471,7 +467,9 @@ footer .fa-hands-helping {
   border-radius: 17px;
   box-shadow: 0px 6px 10px #D8D8D8;
   overflow: hidden;
-  animation: menu_motion 1.5s 100ms linear forwards;
+}
+.entree__carte > :first-child {
+  overflow: hidden;
 }
 .entree__carte:hover .check {
   margin-right: 90px;
@@ -503,7 +501,91 @@ footer .fa-hands-helping {
   padding-right: 10px;
 }
 .entree__carte p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-top: -7px;
+}
+.entree__carte h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.entree__carte:nth-child(2) {
+  animation: menu_motion 1500ms 300ms linear forwards;
+}
+.entree__carte:nth-child(3) {
+  animation: menu_motion 1500ms 700ms linear forwards;
+}
+.entree__carte:last-child {
+  animation: menu_motion 1500ms 1100ms linear forwards;
+}
+
+.entree__carte__lanote {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin: 24px 10px -5px 10px;
+  font-size: 17px;
+  padding-left: 12px;
+  border-radius: 17px;
+  box-shadow: 0px 6px 10px #D8D8D8;
+  overflow: hidden;
+}
+.entree__carte__lanote > :first-child {
+  overflow: hidden;
+}
+.entree__carte__lanote:hover .check {
+  margin-right: 90px;
+}
+.entree__carte__lanote:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.entree__carte__lanote .check {
+  display: flex;
+  transition: margin-right 300ms linear;
+}
+.entree__carte__lanote .fa-check-circle {
+  font-size: 34px;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 350ms linear;
+}
+.entree__carte__lanote .content {
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  padding: 0px 28px;
+  margin-right: -90px;
+}
+.entree__carte__lanote .price {
+  font-weight: bold;
+  display: flex;
+  align-items: end;
+  padding-right: 10px;
+}
+.entree__carte__lanote p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: -7px;
+}
+.entree__carte__lanote h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.entree__carte__lanote:nth-child(2) {
+  animation: menu_motion 1500ms 300ms linear forwards;
+}
+.entree__carte__lanote:nth-child(3) {
+  animation: menu_motion 1500ms 700ms linear forwards;
+}
+.entree__carte__lanote:nth-child(4) {
+  animation: menu_motion 1500ms 1050ms linear forwards;
+}
+.entree__carte__lanote:last-child {
+  animation: menu_motion 1500ms 1400ms linear forwards;
 }
 
 .plat__carte {
@@ -516,7 +598,9 @@ footer .fa-hands-helping {
   border-radius: 17px;
   box-shadow: 0px 6px 10px #D8D8D8;
   overflow: hidden;
-  animation: menu_motion 1.5s 100ms linear forwards;
+}
+.plat__carte > :first-child {
+  overflow: hidden;
 }
 .plat__carte:hover .check {
   margin-right: 90px;
@@ -548,7 +632,24 @@ footer .fa-hands-helping {
   padding-right: 10px;
 }
 .plat__carte p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-top: -7px;
+}
+.plat__carte h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.plat__carte:nth-child(2) {
+  animation: menu_motion 1500ms 300ms linear forwards;
+}
+.plat__carte:nth-child(3) {
+  animation: menu_motion 1500ms 700ms linear forwards;
+}
+.plat__carte:last-child {
+  animation: menu_motion 1500ms 1100ms linear forwards;
 }
 
 .dessert__carte {
@@ -561,7 +662,9 @@ footer .fa-hands-helping {
   border-radius: 17px;
   box-shadow: 0px 6px 10px #D8D8D8;
   overflow: hidden;
-  animation: menu_motion 1.5s 100ms linear forwards;
+}
+.dessert__carte > :first-child {
+  overflow: hidden;
 }
 .dessert__carte:hover .check {
   margin-right: 90px;
@@ -593,7 +696,24 @@ footer .fa-hands-helping {
   padding-right: 10px;
 }
 .dessert__carte p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-top: -7px;
+}
+.dessert__carte h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dessert__carte:nth-child(2) {
+  animation: menu_motion 1500ms 300ms linear forwards;
+}
+.dessert__carte:nth-child(3) {
+  animation: menu_motion 1500ms 700ms linear forwards;
+}
+.dessert__carte:last-child {
+  animation: menu_motion 1500ms 1100ms linear forwards;
 }
 
 .commande__btn {
@@ -645,12 +765,6 @@ footer .fa-hands-helping {
 }
 
 @media screen and (min-width: 601px) and (max-width: 990px) {
-  /*
-  .menu__responsive{
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-  }*/
   .menu__responsive {
     display: grid;
     grid-template-areas: ".menu__section__header" "#entree #plat" "#dessert";

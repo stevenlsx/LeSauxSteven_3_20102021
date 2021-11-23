@@ -75,17 +75,7 @@
     }
 
 }
-@keyframes menu_motion{
-    0%{
-        opacity:0;
-        transform: translateY(15px);
-    }
-    
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
+
 @mixin cardstyle{
     display: flex;
     justify-content: space-between;
@@ -96,7 +86,9 @@
     border-radius: 17px;
     box-shadow: 0px 6px 10px #D8D8D8;
     overflow: hidden;
-    animation: menu_motion 1.5s 100ms linear forwards;
+    >:first-child{
+        overflow: hidden;
+    }
     &:hover{
         .check{
             margin-right: 90px;
@@ -129,18 +121,81 @@
         padding-right: 10px;
     }
     p{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         margin-top: -7px;
+    } 
+    h3{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+@keyframes menu_motion{
+    0%{
+        opacity:0;
+        transform: translateY(15px);
+    }
+    33%{
+        opacity: 0.1
     }
     
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 .entree__carte{
     @include cardstyle;
+    &:nth-child(2){
+        animation: menu_motion 1500ms 300ms linear forwards;
+    }
+    &:nth-child(3){
+        animation: menu_motion 1500ms 700ms linear forwards;
+    }
+    &:last-child{
+        animation: menu_motion 1500ms 1100ms linear forwards;
+    }
+}
+.entree__carte__lanote{
+    @include cardstyle;
+    &:nth-child(2){
+        animation: menu_motion 1500ms 300ms linear forwards;
+    }
+    &:nth-child(3){
+        animation: menu_motion 1500ms 700ms linear forwards;
+    }
+    &:nth-child(4){
+        animation: menu_motion 1500ms 1050ms linear forwards;
+    }
+    &:last-child{
+        animation: menu_motion 1500ms 1400ms linear forwards;
+    }
 }
 .plat__carte{
     @include cardstyle;
+    &:nth-child(2){
+        animation: menu_motion 1500ms 300ms linear forwards;
+    }
+    &:nth-child(3){
+        animation: menu_motion 1500ms 700ms linear forwards;
+    }
+    &:last-child{
+        animation: menu_motion 1500ms 1100ms linear forwards;
+    }
 }
 .dessert__carte{
     @include cardstyle;
+    &:nth-child(2){
+        animation: menu_motion 1500ms 300ms linear forwards;
+    }
+    &:nth-child(3){
+        animation: menu_motion 1500ms 700ms linear forwards;
+    }
+    &:last-child{
+        animation: menu_motion 1500ms 1100ms linear forwards;
+    }
 }
 
 
@@ -158,12 +213,7 @@ footer{
     @include omf__footer;
 }
 @media screen and (min-width:601px) and (max-width:990px){
-    /*
-    .menu__responsive{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }*/
+    
     .menu__responsive{
         display: grid;
         grid-template-areas: 
