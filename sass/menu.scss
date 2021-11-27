@@ -1,260 +1,250 @@
-
 /****************HEADER****************/
-.menu__header{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    margin-bottom: -6px;
-    background-color: white;
-    padding-top: 11px;
-    .fa-arrow-left{
-        font-size: 23px;
-        color: #383838;
-        font-weight: bolder;
-        padding-bottom: 12px;
-    }
-    .header__logo{
-        height: 33px;
-    }
+.menu__header {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-bottom: -6px;
+  background-color: white;
+  padding-top: 11px;
+  .fa-arrow-left {
+    font-size: 23px;
+    color: #383838;
+    font-weight: bolder;
+    padding-bottom: 12px;
+  }
+  .header__logo {
+    height: 33px;
+  }
 }
-.restaurant__img{
-    width: 100%;
-    height:400px;
-    object-fit: cover;
-    margin-top: 0px;
+.restaurant__img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 0px;
 }
-
-
 
 /****************SECTION****************/
-.menu__section{
-    position: relative;
-    margin-top: -71px;
-    border-radius: 45px 45px 0px 0px;
-    background-color: #F6F6F6;
-    article{
-        background-color: #F6F6F6;
-        margin-bottom: 28px;
-        padding-top: 10px;
-    }
-    &_h1{
-        font-family: "shrikhandregular";
-        font-size: 34px;
-        padding-left: 19px;
-        padding-top: 19px;
-    }
-    &__header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .fa-heart{
+.menu__section {
+  position: relative;
+  margin-top: -71px;
+  border-radius: 45px 45px 0px 0px;
+  background-color: #f6f6f6;
+  article {
+    background-color: #f6f6f6;
+    margin-bottom: 28px;
+    padding-top: 10px;
+  }
+  &_h1 {
+    font-family: "shrikhandregular";
+    font-size: 34px;
+    padding-left: 19px;
+    padding-top: 19px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fa-heart {
     font-size: 1.5em;
     padding-top: 17px;
     padding-right: 26px;
     transition: all 400ms ease-in;
-        &:hover{
-        color: #FF79DA;
-        font-weight:600;
-        }
+    &:hover {
+      color: #ff79da;
+      font-weight: 600;
     }
+  }
 
-    .article__titre{
-        position: relative;
-        margin-left: 14px;
-        font-size: 19px;
-        &:before{                               /*<-------------Souligne ENTREES, PLAT, DESSERTS*/
-            content:"";
-            position: absolute;
-            bottom: -8px;
-            left: 2px;
-            border-bottom: 3.5px solid #99E2D0;
-            width: 45px;
-        }
+  .article__titre {
+    position: relative;
+    margin-left: 14px;
+    font-size: 19px;
+    &:before {
+      /*<-------------Souligne ENTREES, PLAT, DESSERTS*/
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 2px;
+      border-bottom: 3.5px solid #99e2d0;
+      width: 45px;
     }
-
+  }
 }
 
-@mixin cardstyle{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin: 24px 10px -5px 10px;
-    font-size: 17px;
-    padding-left: 12px;
-    border-radius: 17px;
-    box-shadow: 0px 6px 10px #D8D8D8;
+@mixin cardstyle {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin: 24px 10px -5px 10px;
+  font-size: 17px;
+  padding-left: 12px;
+  border-radius: 17px;
+  box-shadow: 0px 6px 10px #d8d8d8;
+  overflow: hidden;
+  > :first-child {
     overflow: hidden;
-    >:first-child{
-        overflow: hidden;
+  }
+  &:hover {
+    .check {
+      margin-right: 90px;
     }
-    &:hover{
-        .check{
-            margin-right: 90px;
-        }
-        .fa-check-circle{
-            transform: rotate(360deg);
-        }
+    .fa-check-circle {
+      transform: rotate(360deg);
     }
-    .check{
-        display: flex;
-        transition: margin-right 300ms linear;
-    }
-    .fa-check-circle{
-        font-size: 34px;        
-        color: white;
-        transform: rotate(0deg);
-        transition: transform 350ms linear;
-    }
-    .content{
-        display: flex;
-        align-items: center;
-        background-color: #99E2D0 ;
-        padding: 0px 28px;
-        margin-right: -90px;
-    }
-    .price{
-        font-weight: bold;
-        display: flex;
-        align-items: end;
-        padding-right: 10px;
-    }
-    p{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        margin-top: -7px;
-    } 
-    h3{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+  }
+  .check {
+    display: flex;
+    transition: margin-right 300ms linear;
+  }
+  .fa-check-circle {
+    font-size: 34px;
+    color: white;
+    transform: rotate(0deg);
+    transition: transform 350ms linear;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    background-color: #99e2d0;
+    padding: 0px 28px;
+    margin-right: -90px;
+  }
+  .price {
+    font-weight: bold;
+    display: flex;
+    align-items: end;
+    padding-right: 10px;
+  }
+  p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: -7px;
+  }
+  h3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
-@keyframes menu_motion{
-    0%{
-        opacity:0;
-        transform: translateY(15px);
-    }
-    33%{
-        opacity: 0.1
-    }
-    
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
+@keyframes menu_motion {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  33% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
-.entree__carte{
-    @include cardstyle;
-    &:nth-child(2){
-        animation: menu_motion 1500ms 300ms linear forwards;
-    }
-    &:nth-child(3){
-        animation: menu_motion 1500ms 700ms linear forwards;
-    }
-    &:last-child{
-        animation: menu_motion 1500ms 1100ms linear forwards;
-    }
+.entree__carte {
+  @include cardstyle;
+  &:nth-child(2) {
+    animation: menu_motion 1500ms 300ms linear forwards;
+  }
+  &:nth-child(3) {
+    animation: menu_motion 1500ms 700ms linear forwards;
+  }
+  &:last-child {
+    animation: menu_motion 1500ms 1100ms linear forwards;
+  }
 }
-.entree__carte__lanote{
-    @include cardstyle;
-    &:nth-child(2){
-        animation: menu_motion 1500ms 300ms linear forwards;
-    }
-    &:nth-child(3){
-        animation: menu_motion 1500ms 700ms linear forwards;
-    }
-    &:nth-child(4){
-        animation: menu_motion 1500ms 1050ms linear forwards;
-    }
-    &:last-child{
-        animation: menu_motion 1500ms 1400ms linear forwards;
-    }
+.entree__carte__lanote {
+  @include cardstyle;
+  &:nth-child(2) {
+    animation: menu_motion 1500ms 300ms linear forwards;
+  }
+  &:nth-child(3) {
+    animation: menu_motion 1500ms 700ms linear forwards;
+  }
+  &:nth-child(4) {
+    animation: menu_motion 1500ms 1050ms linear forwards;
+  }
+  &:last-child {
+    animation: menu_motion 1500ms 1400ms linear forwards;
+  }
 }
-.plat__carte{
-    @include cardstyle;
-    &:nth-child(2){
-        animation: menu_motion 1500ms 300ms linear forwards;
-    }
-    &:nth-child(3){
-        animation: menu_motion 1500ms 700ms linear forwards;
-    }
-    &:last-child{
-        animation: menu_motion 1500ms 1100ms linear forwards;
-    }
+.plat__carte {
+  @include cardstyle;
+  &:nth-child(2) {
+    animation: menu_motion 1500ms 300ms linear forwards;
+  }
+  &:nth-child(3) {
+    animation: menu_motion 1500ms 700ms linear forwards;
+  }
+  &:last-child {
+    animation: menu_motion 1500ms 1100ms linear forwards;
+  }
 }
-.dessert__carte{
-    @include cardstyle;
-    &:nth-child(2){
-        animation: menu_motion 1500ms 300ms linear forwards;
-    }
-    &:nth-child(3){
-        animation: menu_motion 1500ms 700ms linear forwards;
-    }
-    &:last-child{
-        animation: menu_motion 1500ms 1100ms linear forwards;
-    }
+.dessert__carte {
+  @include cardstyle;
+  &:nth-child(2) {
+    animation: menu_motion 1500ms 300ms linear forwards;
+  }
+  &:nth-child(3) {
+    animation: menu_motion 1500ms 700ms linear forwards;
+  }
+  &:last-child {
+    animation: menu_motion 1500ms 1100ms linear forwards;
+  }
 }
 
-
-.commande__btn{
-    width: 200px;
-    font-size:16px;
-    padding: 0px 0px;
-    @include btn;
-    margin-top: 27px;
+.commande__btn {
+  width: 200px;
+  font-size: 16px;
+  padding: 16px 0px;
+  @include btn;
+  margin-top: 27px;
 }
-
 
 /****************FOOTER****************/
-footer{
-    @include omf__footer;
+footer {
+  @include omf__footer;
 }
-@media screen and (min-width:601px) and (max-width:990px){
-    
-    .menu__responsive{
-        display: grid;
-        grid-template-areas: 
-        ".menu__section__header"
-        "#entree #plat"
-         "#dessert";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    .menu__section__header{
-        justify-content: center;
-        
-    }
-    .menu__section_h1{
-        margin-right: 10px;
-    }
+@media screen and (min-width: 601px) and (max-width: 990px) {
+  .menu__responsive {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menu__section article {
+    width: 50%;
+  }
+  .menu__section__header {
+    justify-content: center;
+  }
+  .menu__section_h1 {
+    margin-right: 10px;
+  }
 }
-    
-    /**************************DESKTOP/LAPTOP**************************/
-    @media screen and (min-width:991px){
-        .menu__responsive{
-            display: grid;
-            grid-template-areas: 
-            ".menu__section__header"
-            "#entree #plat #dessert";
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-        }
-        .entree__carte{
-            height: 121px;
-        }
-        .plat__carte{
-            height: 121px;
-        }
-        .dessert__carte{
-            height: 121px;
-        }
-        .menu__section__header{
-            justify-content: center;
-        }
-        .menu__section_h1{
-            margin-right: 10px;
-        }
-    }
+
+/**************************DESKTOP/LAPTOP**************************/
+@media screen and (min-width: 991px) {
+  .menu__responsive {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .menu__section article {
+    width: 33%;
+  }
+  .entree__carte {
+    height: 121px;
+  }
+  .plat__carte {
+    height: 121px;
+  }
+  .dessert__carte {
+    height: 121px;
+  }
+  .menu__section__header {
+    justify-content: center;
+  }
+  .menu__section_h1 {
+    margin-right: 10px;
+  }
+}
