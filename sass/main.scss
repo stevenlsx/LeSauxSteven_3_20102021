@@ -244,7 +244,7 @@ footer {
 
 @keyframes overlay_motion {
   0% {
-    transform: scaleY(1);
+    transform: translateY(1);
     opacity: 0.85;
   }
   33% {
@@ -258,7 +258,7 @@ footer {
     opacity: 0;
   }
   100% {
-    transform: scaleY(0);
+    transform: translateY(0);
   }
 }
 
@@ -274,9 +274,9 @@ footer {
   animation: overlay_motion 600ms 2s forwards;
   /********SPINER********/
   $grey: #cccccc;
-  $purple: #9356dc;
-  $cyan: #ff79da;
-  $red: #99e2d0;
+  $primary: #9356dc;
+  $secondary: #ff79da;
+  $tertiary: #99e2d0;
   .on-load {
     opacity: 0;
     animation: fade-in-up 1s forwards;
@@ -320,16 +320,16 @@ footer {
 
   @keyframes colour-wheel {
     0% {
-      border-top-color: $purple;
+      border-top-color: $primary;
     }
     33% {
-      border-top-color: $cyan;
+      border-top-color: $secondary;
     }
     66% {
-      border-top-color: $red;
+      border-top-color: $tertiary;
     }
     100% {
-      border-top-color: $purple;
+      border-top-color: $primary;
     }
   }
 }
